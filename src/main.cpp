@@ -99,13 +99,15 @@ int main(int argc, char* argv[]) {
         }
     }
 
+    std::string nombres_archivos[argc - 1 - salto];
+    double distancias[argc - 1 - salto];
+
     if (!parametros_ok) {
         showEnglishHelp(cout);
         exit(1);
     } else { // si los parametros son correctos
         larray = reservar(argc - 1 - salto);
-        std::string nombres_archivos[argc - 1 - salto];
-        double distancias[argc-1-salto];
+
         // si tenemos parámetro
         Language language_referencia, language_auxiliar;
         language_referencia.load(argv[pos_primer_language]); // cargamos el primer language
@@ -120,15 +122,30 @@ int main(int argc, char* argv[]) {
             cout << "Distance to " << nombres_archivos[i] << ": " << language_referencia.getDistance(larray[i]) << endl;
         }
     }
-    
-    //    if(parametro_es_min){
-    //       cout << "Nearest language file: " << argv[x] << endl <<
-    //            "Identifier of the nearest language: "<< larray[x].getLanguageId() << endl;
-    //    }
-    //    else{
-    //       cout << "Farthest language file: " << argv[x] << endl <<
-    //            "Identifier of the farthest language: "<< larray[x].getLanguageId() << endl;        
-    //    }
+    // calculamos la menor y la mayor distancia
+    int pos_language_min_distance = 1, pos_language_max_distance = 0;
+    for (int i = 1; i < sizeof (distancias) / sizeof (distancias[0]) - 1; i++) {
+        min_distance = distancias[0];
+        max_distance = distancias[0];
+        
+        if(distancias[i] < min_distance){
+            min_distance = distancias[i];
+            pos_language_min_distance = i;
+        }
+        if(distancias[i] > max_distance){
+            max_distance = distancias[i];
+            pos_language_max_distance = i;
+        }
+    }
+
+        if(parametro_es_min){
+           cout << "Nearest language file: " << nombres_archivos[pos_language_min_distance] << endl <<
+                "Identifier of the nearest language: "<< larray[pos_language_min_distance].getLanguageId() << endl;
+        }
+        else{
+           cout << "Farthest language file: " << nombres_archivos[pos_language_max_distance] << endl <<
+                "Identifier of the farthest language: "<< larray[pos_language_max_distance].getLanguageId() << endl;        
+        }
 
     liberar(larray);
 }
