@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{ifthen}
+\usepackage{epsfig}
+\usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+  \newunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \newunicodechar{²}{${}^{2}$}% Superscript two
+  \newunicodechar{³}{${}^{3}$}% Superscript three
+
+\pagestyle{empty}
+\begin{document}
+$L_1$
+\pagebreak
+
+$L_2$
+\pagebreak
+
+$d = \sum_{bigram_i(L_1)} \frac{ | rank_{bigram_i(L_1)}^{L_1} - rank_{bigram_i(L_1)}^{L_2} | }{size(L_1) * size(L_1)}$
+\pagebreak
+
+$bigram_i(L_j)$
+\pagebreak
+
+$i$
+\pagebreak
+
+$L_j, j \in \{1, 2\}$
+\pagebreak
+
+$rank_{bigram_i(L_j)}^{L_k}$
+\pagebreak
+
+$L_k$
+\pagebreak
+
+$rank_{bigram_i(L_1)}^{L_2}$
+\pagebreak
+
+$bigram_i(L_1)$
+\pagebreak
+
+\end{document}
