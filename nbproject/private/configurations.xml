@@ -32,8 +32,9 @@
           <runcommandpicklistitem>"${OUTPUT_PATH}" -t min /home/sergio/NetBeansProjects/Books/4bigrams.bgr /home/sergio/NetBeansProjects/Books/30bigrams.bgr /home/sergio/NetBeansProjects/Books/30bigrams.bgr</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" /home/sergio/NetBeansProjects/Books/4bigrams.bgr /home/sergio/NetBeansProjects/Books/30bigrams.bgr /home/sergio/NetBeansProjects/Books/30bigrams.bgr</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" /home/sergio/NetBeansProjects/Books/prep_xx.bgr /home/sergio/NetBeansProjects/Books/prep_en.bgr /home/sergio/NetBeansProjects/Books/prep_fr.bgr /home/sergio/NetBeansProjects/Books/prep_sp.bgr /home/sergio/NetBeansProjects/Books/prep_ge.bgr</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -t max /home/sergio/NetBeansProjects/Books/prep_xx.bgr /home/sergio/NetBeansProjects/Books/prep_en.bgr /home/sergio/NetBeansProjects/Books/prep_fr.bgr /home/sergio/NetBeansProjects/Books/prep_sp.bgr /home/sergio/NetBeansProjects/Books/prep_ge.bgr</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" /home/sergio/NetBeansProjects/Books/prep_xx.bgr /home/sergio/NetBeansProjects/Books/prep_en.bgr /home/sergio/NetBeansProjects/Books/prep_fr.bgr /home/sergio/NetBeansProjects/Books/prep_sp.bgr /home/sergio/NetBeansProjects/Books/prep_ge.bgr</runcommand>
+        <runcommand>"${OUTPUT_PATH}" -t max /home/sergio/NetBeansProjects/Books/prep_xx.bgr /home/sergio/NetBeansProjects/Books/prep_en.bgr /home/sergio/NetBeansProjects/Books/prep_fr.bgr /home/sergio/NetBeansProjects/Books/prep_sp.bgr /home/sergio/NetBeansProjects/Books/prep_ge.bgr</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>
