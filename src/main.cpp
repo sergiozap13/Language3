@@ -124,28 +124,27 @@ int main(int argc, char* argv[]) {
     }
     // calculamos la menor y la mayor distancia
     int pos_language_min_distance = 1, pos_language_max_distance = 0;
+    min_distance = distancias[0];
+    max_distance = distancias[0];
     for (int i = 1; i < sizeof (distancias) / sizeof (distancias[0]) - 1; i++) {
-        min_distance = distancias[0];
-        max_distance = distancias[0];
-        
-        if(distancias[i] < min_distance){
+
+        if (distancias[i] < min_distance) {
             min_distance = distancias[i];
             pos_language_min_distance = i;
         }
-        if(distancias[i] > max_distance){
+        if (distancias[i] > max_distance) {
             max_distance = distancias[i];
             pos_language_max_distance = i;
         }
     }
 
-        if(parametro_es_min){
-           cout << "Nearest language file: " << nombres_archivos[pos_language_min_distance] << endl <<
-                "Identifier of the nearest language: "<< larray[pos_language_min_distance].getLanguageId() << endl;
-        }
-        else{
-           cout << "Farthest language file: " << nombres_archivos[pos_language_max_distance] << endl <<
-                "Identifier of the farthest language: "<< larray[pos_language_max_distance].getLanguageId() << endl;        
-        }
+    if (parametro_es_min) {
+        cout << "Nearest language file: " << nombres_archivos[pos_language_min_distance] << endl <<
+                "Identifier of the nearest language: " << larray[pos_language_min_distance].getLanguageId() << endl;
+    } else {
+        cout << "Farthest language file: " << nombres_archivos[pos_language_max_distance] << endl <<
+                "Identifier of the farthest language: " << larray[pos_language_max_distance].getLanguageId() << endl;
+    }
 
     liberar(larray);
 }
@@ -168,6 +167,8 @@ void liberar(Language * larray) {
         larray = nullptr;
     }
 }
+
+// obtener nombre del archivo a partir de su ruta
 
 string nombreArchivo(string ruta) {
 
