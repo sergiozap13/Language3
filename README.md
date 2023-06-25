@@ -1,2 +1,2 @@
 # Language3
- Practica 4 de la asignatura MP
+Cuarta práctica de la asignatura de Métodología de la programación, impartida en la Universidad de Granada en el primer curso de Ingeniería Informática del 2023
